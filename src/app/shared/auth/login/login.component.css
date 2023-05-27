@@ -1,0 +1,37 @@
+.fullscreen {
+  background: #4b6cb7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #182848, #4b6cb7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #121e37, #1e0631); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  min-height: 100vh;
+  width: 100%;
+}
+
+.img {
+  width: 16rem;
+  height: 16rem;
+  margin: 0 auto 3rem auto;
+
+  background: url(../../../../assets/logo-transparent-notext.png) center no-repeat;
+  background-size: 100%;
+}
+
+.main{
+  margin: 0 auto;
+  padding-top: 8rem;
+  width: fit-content;
+
+  text-align: center;
+  color: #fff;
+}
+
+.heading-primary{
+  color: #fff;
+  margin-bottom: 3.5rem;
+}
+
+.auth-type {
+
+}
+
+

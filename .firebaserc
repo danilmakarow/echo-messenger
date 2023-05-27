@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "project-echo-01": {
+      "hosting": {
+        "echo": [
+          "project-echo-01"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "project-echo-01"
+  }
+}

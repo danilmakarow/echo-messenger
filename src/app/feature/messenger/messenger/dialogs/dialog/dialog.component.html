@@ -1,0 +1,12 @@
+<div class="chat flex" *ngFor="let dialog of dialogs$ | async" (click)="onclick(dialog, selected)" [routerLink]="dialog.ref.id" #selected>
+  <div class="img-box">
+    <img class="avatar" alt="User's avatar" [attr.src]="dialog.otherUserPhoto" decoding="async">
+  </div>
+  <div class="content-box">
+    <div class="header flex">
+      <p class="username">{{dialog.otherUserName}}</p>
+      <p class="time">{{dialog.lastMessageTime | date:'HH:mm'}}</p>
+    </div>
+    <p class="message">{{dialog.lastMessageValue}}</p>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="container">
+  <header class="header flex">
+    <div class="user flex" *ngIf="user$ | async as user">
+      <div class="mobile-btn-box" *ngIf="screenSize.isTablet$ | async">
+        <button mat-icon-button matTooltip="Basic" *ngIf="!(componentsDisplay.dialogsDisplay$ | async)" (click)="onShowDialogs()">
+          <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        <button mat-icon-button matTooltip="Basic" *ngIf="componentsDisplay.dialogsDisplay$ | async" (click)="onHideDialogs()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+      <div class="avatar-box">
+        <img class="avatar" [attr.src]="user.photo" alt="user's avatar">
+      </div>
+      <div class="username">{{user.name}}</div>
+    </div>
+    <button mat-icon-button [matMenuTriggerFor]="menu" color="accent">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="onDeleteChat()">
+        <mat-icon>delete</mat-icon>
+        <span>Delete chat</span>
+      </button>
+    </mat-menu>
+  </header>
+  <div class="messenger-container flex">
+    <main class="main" (click)="onChatClick()">
+      <app-message [messages]="messages$ | async"></app-message>
+    </main>
+    <div class="input-field">
+      <div class="input-container">
+        <textarea class="input" placeholder="Message" #message (input)="this.chatData.messageHeightCalc(message)" (keydown)="onKeyDown($event)"></textarea>
+        <button class="btn-send" mat-icon-button color="accent" (click)="this.chatData.onSendMessage(message)">
+          <mat-icon class="menu-icon">send</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

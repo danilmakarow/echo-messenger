@@ -1,0 +1,27 @@
+  <main class="main">
+    <div class="messages-container">
+      <div
+        class="message flex"
+        *ngFor="let message of messages; index as i"
+        [ngClass]="message.senderId.id === curUserId ? 'message-centering-right' : 'message-centering-left'"
+        [class.lastMes]="messages?.length === i + 1"
+        #messageRef
+      >
+        <div class="message-box">
+          <div class="echo-box right" *ngIf="messageRef.classList.contains('message-centering-right'); else echoLeft">
+            <img src="../../../../../../assets/svg/echo-send.svg" alt="echo-svg"/>
+          </div>
+          <ng-template #echoLeft>
+            <div class="echo-box left">
+              <img src="../../../../../../assets/svg/echo-receive.svg" alt="echo-svg"/>
+            </div>
+          </ng-template>
+          <p class="message-text">{{message.content}}</p>
+          <span class="message-time" title="{{message.time | date:'d MMMM, y, HH:mm:ss' }}">
+            {{message.time | date:'HH:mm'}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </main>
+

@@ -1,0 +1,12 @@
+<div class="auth-box">
+<!--  <h2 class="auth-type">Sign In</h2>-->
+  <!--  <p class="subheading">Please enter your email, phone number and password</p>-->
+  <form [formGroup]="myForm">
+    <div class="auth-form-box">
+      <label class="auth-form-label">Phone code</label>
+      <input type="text" maxlength="6" class="auth-form-input" placeholder="123456" formControlName="Code">
+      <div class="error-box" *ngIf="auth.codeError$ | async as error">{{ error }}</div>
+    </div>
+    <button class="btn btn-auth" (click)="onPhoneCode()">Verify code</button>
+  </form>
+</div>

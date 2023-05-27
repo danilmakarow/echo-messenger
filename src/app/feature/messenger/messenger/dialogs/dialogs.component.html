@@ -1,0 +1,24 @@
+<div class="container">
+  <header class="header flex">
+    <button mat-icon-button [matMenuTriggerFor]="menu" color="accent">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="openDialog()">
+        <mat-icon>edit</mat-icon>
+        <span>Start new chat</span>
+      </button>
+      <button mat-menu-item (click)="auth.logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+    <div class="search-box">
+      <input type="text" class="search-input" placeholder="Search..." (input)="filterDialogs(filter.value)" #filter>
+      <mat-icon class="icon search-icon">search</mat-icon>
+    </div>
+  </header>
+  <main class="main">
+    <app-dialog (selectedDialog)="dialogTrans.dialog$.next($event)" [dialogs$]="dialogs$"></app-dialog>
+  </main>
+</div>

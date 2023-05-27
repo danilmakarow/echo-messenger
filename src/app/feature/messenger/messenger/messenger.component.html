@@ -1,0 +1,12 @@
+<div class="container flex">
+  <aside [ngClass]="{
+  'sidenav--pc':!(screenSize.isTablet$ | async),
+  'sidenav--tablet':screenSize.isTablet$ | async,
+  'sidenav--mobile':screenSize.isMobile$ | async
+  }" *ngIf="this.componentsDisplay.dialogsDisplay$ | async">
+    <app-dialogs></app-dialogs>
+  </aside>
+  <main class="main img" *ngIf="this.componentsDisplay.chatDisplay$ | async">
+    <router-outlet></router-outlet>
+  </main>
+</div>

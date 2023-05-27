@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Start new Chat</h1>
+<form [formGroup]="myForm">
+    <div mat-dialog-content>
+        <mat-form-field>
+            <mat-label>Phone number</mat-label>
+            <input matInput maxlength="13" formControlName="Phone">
+            <span class="error" *ngIf="error$ | async as error"> {{ error }} </span>
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="onCancel()">Cancel</button>
+        <button mat-button (click)="onStart()" cdkFocusInitial>Start Dialog</button>
+    </div>
+</form>

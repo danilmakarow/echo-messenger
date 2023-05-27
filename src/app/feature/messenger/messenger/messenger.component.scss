@@ -1,0 +1,29 @@
+.container {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.sidenav--pc {
+  min-width: 30rem;
+  width: 40%;
+  max-width: 40rem;
+}
+
+.sidenav--tablet {
+  min-width: 40rem;
+}
+
+.sidenav--mobile {
+  width: 100%;
+  min-width: auto;
+}
+
+.main {
+  width: 100%;
+}
+
+.img {
+  background: url(../../../../assets/chats-background.jpg) center no-repeat;
+  background-size: cover;
+}

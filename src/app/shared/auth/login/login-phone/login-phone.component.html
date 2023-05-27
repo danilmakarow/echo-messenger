@@ -1,0 +1,15 @@
+<div class="auth-box">
+<!--  <h2 class="auth-type">Sign Up</h2>-->
+<!--  <p class="subheading">Please enter your phone number</p>-->
+    <form [formGroup]="myForm">
+        <div class="auth-form-box">
+            <label class="auth-form-label">Your phone number</label>
+            <input type="phone" class="auth-form-input" placeholder="+380" formControlName="Phone">
+            <div class="error-box" *ngIf="auth.phoneError$ | async as error">{{ error }}</div>
+        </div>
+        <div class="auth-form-box">
+            <div class="" id="captcha"></div>
+        </div>
+        <button class="btn btn--full btn-auth" (click)="onLogin()">Join</button>
+    </form>
+</div>

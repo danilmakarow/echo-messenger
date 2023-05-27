@@ -1,0 +1,14 @@
+<div class="auth-box">
+      <h2 class="auth-type">Start Messaging Today!</h2>
+    <form [formGroup]="myForm">
+        <div class="auth-form-box">
+            <label class="auth-form-label">Your name</label>
+            <input type="text" minlength="3" maxlength="15" class="auth-form-input" placeholder="Danil" formControlName="Name">
+        </div>
+        <div class="auth-form-box">
+            <label class="auth-form-label">Link to photo (optional)</label>
+            <input type="text" class="auth-form-input" placeholder="https://image.com/photo.png" formControlName="Photo">
+        </div>
+        <button class="btn btn--full btn-auth" (click)="onConfirm()">Confirm</button>
+    </form>
+</div>

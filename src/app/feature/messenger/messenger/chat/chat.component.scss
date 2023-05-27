@@ -1,0 +1,129 @@
+.container {
+  height: 100%;
+}
+
+// HEADER //
+
+.header {
+  padding: 0.9rem 2rem;
+  justify-content: space-between;
+  background-color: #1f1f21;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.25098);
+}
+
+.user {
+  height: 100%;
+  align-items: center;
+  gap: 0.7rem;
+  width: max-content;
+}
+
+.avatar-box{
+  width: 5rem;
+  height: 5rem;
+}
+
+.avatar {
+  height: 100%;
+  width: 100%;
+
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.username {
+  font-size: 1.6rem;
+  color: #d0d0d0;
+  font-weight: 600;
+}
+
+// CHAT //
+
+.main {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100% - 6rem);
+  margin-bottom: 1rem;
+}
+
+.messenger-container {
+  height: calc(100% - 6.8rem);
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+/*INPUT*/
+.input-field {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.input-container {
+  position: relative;
+  max-width: 70rem;
+  width: available;
+  //height: 6rem;
+  margin: 0 auto;
+}
+
+.input {
+  width: 100%;
+  border-radius: 15px;
+  padding: 1.6rem 5rem 1.6rem 3rem;
+  border: none;
+  background-color: #27272a;
+  height: 54px;
+
+  font-size: 1.8rem;
+  color: #fff;
+
+  resize: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-send {
+  position: absolute;
+  right: 5px;
+  top: 2px;
+}
+
+//SCROLLBAR
+
+/* Для WebKit */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.3);
+  border-radius: 4px;
+}
+
+/* Для Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(128, 128, 128, 0.3) transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:vertical {
+  height: 30%;
+}
+
+*::-webkit-scrollbar-thumb:horizontal {
+  width: 30%;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.3);
+  border-radius: 4px;
+}

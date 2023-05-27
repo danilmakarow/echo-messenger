@@ -1,0 +1,84 @@
+.container {
+  height: 100%;
+  background-color: #18181b;
+  border-right: 1px solid #2e2e2e;
+}
+
+/*HEADER*/
+
+.header {
+  align-items: center;
+  background-color: #1f1f21;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.25098)
+}
+
+.search-box {
+  width: 100%;
+  padding: 1.3rem;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  padding: 1.2rem 1.5rem 1.2rem 4rem;
+  border-radius: 20px;
+
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: #27272a;
+  transition: 0.1s;
+}
+.search-input:focus{
+  outline: 2px solid #5f3dc4;
+}
+
+.search-icon {
+  position: absolute;
+  left: 23px;
+  top: 22px;
+}
+
+// MAIN //
+
+.main {
+  padding: 1rem;
+  height: calc(100% - 6.8rem);
+  overflow-y: scroll;
+}
+
+//SCROLLBAR
+
+/* Для WebKit */
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.3);
+  border-radius: 4px;
+}
+
+/* Для Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(128, 128, 128, 0.3) transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:vertical {
+  height: 30%;
+}
+
+*::-webkit-scrollbar-thumb:horizontal {
+  width: 30%;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.3);
+  border-radius: 4px;
+}
